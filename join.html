@@ -1,0 +1,230 @@
+<html>
+    <head>
+      <link rel="stylesheet" href=" https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+      <link rel="stylesheet" href="./">
+        <title>Join in</title>
+        <script src="./form.js"></script>
+        <script>
+        // function handleSubmit() {
+        //     const firstname=document.getElementById('txt').value;
+        //     const middlename=document.getElementById('tx').value;
+        //     const lastname=document.getElementById('txtt').value;
+        //     const education=document.getElementById('hg').value;
+        //     const email=document.getElementById('tg').value;
+        //     const address=document.getElementById('jh').value;
+        //     const selectoption=document.getElementById('mytext').value;
+        //     const month=document.getElementById('myTxt').value;
+        //      const month=document.getElementById('myTxt').value;
+           
+        //     localStorage.setItem("textvalue",firstname);
+        //     localStorage.setItem("textvalues",middlename);
+        //     localStorage.setItem("textvaluess",lastname);
+        //     localStorage.setItem("textvaluesss",education);
+        //     localStorage.setItem("textvaluessd",email);
+        //     localStorage.setItem("textvaluessa",address);
+        //     localStorage.setItem("ddvalue",selectoption);
+        //     localStorage.setItem("vsss",month);
+        
+        //     return false ;
+        // }
+        </script>
+        <style>
+            input[type=text], input[type=password] {
+  width: 100%;
+  padding: 15px;
+  margin: 5px 0 22px 0;
+  display: inline-block;
+  border: none;
+  background: #f1f1f1;
+}
+            h1{
+                font-size: 40;
+                text-align: center;
+                text-decoration: hotpink;
+                color: greenyellow;
+            }
+            body{
+                background-color:white;   
+       width: 100%;  
+        color: orange;   
+        padding: 15px;   
+        margin: 10px 0px;   
+        border: none;   
+        cursor: pointer;  
+                
+            }
+        </style>
+        <body>
+            <form action="lastpage.html" name="joinForm">
+            <h1>Join now</h1>
+            <label> Firstname </label>       
+<input class="" type="text" name="firstName"id="txt" maxlength="15"/> <br> <br>
+<label> Middlename: </label>   
+<input type="text" name="middleName"id="tx" maxlength="10"/> <br> <br>
+<label> Lastname: </label>       
+<input type="text" name="lastName" id="txtt"size="15"/> <br> <br>
+<label>
+    education :
+</label><br>
+<input type="text" name="education"id="hg" maxlength="=100"/>
+<br>
+<br>
+
+<label>email address :</label> 
+<input  name="email" type="text" placeholder="abc@gmail.com"id="tg"  />
+<br>
+<br>
+<label> address :</label> 
+<input type="text" name = "address" placeholder="address"id="jh"  /><br>
+
+<label for="birthdaytime">Birthday</label>
+<br>
+<input type="date" id="datePicker" name="birthdaytime">
+<br><br>
+<label for="profile Picture">Profile Picture</label>
+
+<input type="file" name="profilePicture" id="profilePicture" accept="image/">
+<br><br>
+<!-- 
+            
+<select id="mytext date" onchange="getDay()">
+    <option value="date">date</option>
+    <option value="1">1</option>
+    <option value="2">2</option>
+    <option value="3">3</option>
+    <option value="4">4</option>
+    <option value="5">5</option>
+    <option value="6">6</option>
+    <option value="7">7</option>
+<option value="8">8</option>
+<option value="9">9</option>
+<option value="10">10</option>
+<option value="11">11</option>
+<option value="12">12</option>
+<option value="13">13</option>
+<option value="14">14</option>
+<option value="15">15</option>
+<option value="16">16</option>
+<option value="17">17</option>
+<option value="18">18</option>
+<option value="19">19</option>
+<option value="20">20</option>
+<option value="21">21</option>
+<option value="22">22</option>
+<option value="23">23</option>
+<option value="24">24</option>
+<option value="25">25</option>
+<option value="26">26</option>
+<option value="27">27</option>
+<option value="28">28</option>
+<option value="29">29</option>
+<option value="30">30</option>
+<option value="31">31</option>
+    </select>
+    <select id="month">
+        <option>- Month -</option>
+        <option value="January">January</option>
+        <option value="Febuary">Febuary</option>
+        <option value="March">March</option>
+        <option value="April">April</option>
+        <option value="May">May</option>
+        <option value="June">June</option>
+        <option value="July">July</option>
+        <option value="August">August</option>
+        <option value="September">September</option>
+        <option value="October">October</option>
+        <option value="November">November</option>
+        <option value="December">December</option>
+    </select>
+        <select>
+            <option>- Year -</option>
+            <option value="2020">2020</option>
+            <option value="2019">2019</option>
+            <option value="2018">2018</option>
+            <option value="2017">2017</option>
+            <option value="2016">2016</option>
+            <option value="2015">2015</option>
+            <option valnt is a divue="2014">2014</option>
+            <option value="2013">2013</option>
+            <option value="2012">2012</option>
+            <option value="2011">2011</option>
+            <option value="2010">2010</option>
+            <option value="2009">2009</option>
+            <option value="2008">2008</option>
+            <option value="2007">2007</option>
+            <option value="2006">2006</option>
+            <option value="2005">2005</option>
+            <option value="2004">2004</option>
+            <option value="2003">2003</option>
+            <option value="2002">2002</option>
+            <option value="2001">2001</option>
+            <option value="2000">2000</option>
+            <option value="1999">1999</option>
+            <option value="1998">1998</option>
+            <option value="1997">1997</option>
+            <option value="1996">1996</option>
+            <option value="1995">1995</option>
+            <option value="1994">1994</option>
+            <option value="1993">1993</option>
+            <option value="1992">1992</option>
+            <option value="1991">1991</option>
+            </select>
+            <br>
+<br> -->
+<label> 
+Gender :
+</label><br>
+<div class="form-check">
+    <input class="form-check-input" type="radio" name="gender" id="gender" value="male">
+    <label class="form-check-label" for="flexRadioDefault1">
+      Male
+    </label>
+  </div>
+  <div class="form-check">
+    <input class="form-check-input" type="radio" name="gender" id="gender" value="female" >
+    <label class="form-check-label" for="flexRadioDefault2">
+      Female
+    </label>
+  </div>
+  <div class="form-check">
+    <input class="form-check-input" type="radio" name="gender" id="gender" value="other">
+    <label class="form-check-label" for="flexRadioDefault2">
+      Other
+    </label>
+  </div>
+
+</div>
+
+
+<!-- <input type="radio" name="male"id="iu"/> Male <br>
+<input type="radio" name="female"id="oi"/> Female <br>
+<input type="radio" name="other"id="po"/> Other
+<br>
+<br> -->
+<label> 
+    Phone :
+    </label>
+    <input type="text" id="phoneNumber" name="phoneNumber"  placeholder="Phone Number" size="2"maxLength="10"/> 
+    
+    <select id="numberType" name="numberType">
+        <option value="phone">phone</option>
+        <option value="landline">landline</option>
+        <option value="personal">personal</option>
+
+    </select>
+ <br>
+ <br>
+ 
+ <a href="signup.html">
+ <button type="button" class="Back btn btn-danger"> Back</button>
+ </a>
+
+<a href="empl.html">
+ <button type="button" class="Next btn btn-primary" value="click" onClick="return FormData();"> Next</button>
+ </a>
+ </form> 
+
+ 
+        </body>
+    </head>
+</html>

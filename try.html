@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    
+    
+<form name="form">
+    <!-- <select id="mySelect" size="8">
+      <option value="apple">Apple</option>
+      <option value="Pear">Pear</option>
+      <option value="Banana">Banana</option>
+      <option value="Orange">Orange</option>
+    </select> -->
+
+    <select name="headSkill" id="mySelect" class="form-select" aria-label="Default select example">
+        <!-- <option selected >Select Domains</option> -->
+        <option value="frontend">Frontend</option>
+        <option value="backend">Backend</option>
+        <option value="other">other</option>
+      </select>
+
+
+    <input type="text" id = "in">
+    
+      <p>Click the button to add a "Kiwi" option at the end of the dropdown list.</p>
+      <button type="button" onclick="myFunction()">Insert option</button>
+  </form>
+  <br>
+
+  <script>
+      function myFunction(){
+          var input = document.forms["form"]["in"].value;
+//          alert(input)
+          var x = document.getElementById('mySelect')
+          var option = document.createElement("option");
+          option.text = input
+          x.add(option)
+      }
+  </script>
+</body>
+</html>

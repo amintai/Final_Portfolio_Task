@@ -1,0 +1,14 @@
+<html>
+    <head>
+        <title>Result page</title>
+        <body>
+            <h1>result page</h1>
+            <h2>firstname :<span id="result-firstname"/></h2> 
+            <h2>lastname :<span id="result-lastname"/></h2> 
+            <script>
+              document.getElementById("result-firstname").innerHTML=localStorage.getItem('textvalue');
+              document.getElementById("result-lastname").innerHTML=localStorage.getItem('textvalues');
+            </script>
+        </body>
+    </head>
+</html>

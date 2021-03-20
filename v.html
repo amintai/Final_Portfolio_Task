@@ -1,0 +1,26 @@
+<html>
+<head>
+<script type="text/javascript">
+function checkbox(){
+  
+  var checkboxes = document.getElementsByName('vehicle');
+  var checkboxesChecked = [];
+  // loop over them all
+  for (var i=0; i<checkboxes.length; i++) {
+     // And stick the checked ones onto an array...
+     if (checkboxes[i].checked) {
+        checkboxesChecked.push(checkboxes[i].value);
+     }
+  }
+  document.getElementById("show").value = checkboxesChecked;
+
+}
+</script>
+    <form>
+        <input type="checkbox" id="bk" name="vehicle" onClick="checkbox();" value="Bike">I have a bike<br></br>
+        <input type="checkbox" id="cr" name="vehicle" onClick="checkbox();" value="Car">I have a car<br></br> 
+        <input type="text" id="show" name="vehicle"><br>
+        <input type="submit" value="Showe">
+    </form> 
+  </body>
+  </html>

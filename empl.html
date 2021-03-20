@@ -1,0 +1,576 @@
+<html>
+  <head>
+        <title>Registration form</title>
+        <script type="text/javascript">
+
+//           function getModelData(){
+
+//   var skill = document.forms["modelForm"]["headSkill"].value
+
+//   var type = document.forms["modelForm"]["typedSkill"].value
+//   localStorage.setItem("typedSkill",type)
+//   //document.getElementById('h3').innerHTML=skill
+// //-----------child code
+//   // var ul = document.getElementById('head')
+  
+//   // ul.appendChild(document.createTextNode(`${skill}`))
+//   // localStorage.setItem("headSkill" , skill)
+  
+//   //-----------child End code
+//   var br = document.getElementById('br')
+  
+  
+// // var node = document.createElement("LI");
+// //     var textnode = document.createTextNode("Water");
+// //     node.appendChild(textnode);
+// //     document.getElementById("myList").appendChild(node);
+
+//   var selected = []
+//   var select = document.querySelectorAll('input[type=checkbox]:checked')
+  
+//   for(var i=0 ; i< select.length ;i++) {
+//     selected.push(select[i].value)
+//     var li = document.createElement('li',selected)
+//   }
+//   li.appendChild(document.createTextNode(selected))
+//   ul.appendChild(li)
+  
+//   localStorage.setItem("selectedSkill",selected)
+//   //document.getElementById('h6').innerHTML=selected
+  
+//   //console.log(totalHeadSkills)
+// }
+
+
+
+
+//             function getModelLiData() {
+
+//               getModelData();
+
+//                 var ul = document.getElementById('head')
+            
+//                 var d = ul.appendChild(document.createTextNode(`${skill}`))
+//                 console.log(d);
+//                 //localStorage.setItem("headSkill" , skill)
+//            }
+        </script>
+      </head>
+        <body>
+          <h1>Skills</h1>
+          <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+<script src="https://code.jquery.com/jquery-3.5.1.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js"></script>
+<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+  
+          <link rel="stylesheet" href="https://unpkg.com/@coreui/coreui/dist/css/coreui.min.css">
+          <script src="https://unpkg.com/@coreui/coreui/dist/js/coreui.bundle.min.js"></script>
+          <style>
+
+ul li{
+  list-style: none;
+}
+.green {
+  font-weight: bold;
+  color: green;
+}
+input[type=text], input[type=password] {
+  width: 100%;
+  padding: 15px;
+  margin: 5px 0 22px 0;
+  display: inline-block;
+  border: none;
+  background: #f1f1f1;
+}
+            h1{
+                font-size: 40;
+                text-align: left;
+                text-decoration: hotpink;
+                color: greenyellow;
+                
+        }
+            body{
+                background-color:white;   
+       width: 100%;  
+        color: orange;   
+        padding: 15px;   
+        margin: 10px 0px;   
+        border: none;   
+        cursor: pointer;  
+                
+            }
+        
+
+.modal {
+  display: none; 
+  position: fixed; 
+  left: 0;
+  top: 0;
+  width: 100%; 
+  height: 100%; 
+  overflow: auto; 
+  background-color: rgb(0,0,0); 
+  background-color: rgba(0,0,0,0.4); 
+}
+
+
+.modal-content {
+  background-color: #fefefe;
+  margin: auto;
+  padding: 20px;
+  border: 1px solid #888;
+  width: 80%;
+}
+
+
+.close {
+  color: #aaaaaa;
+  float: right;
+  font-size: 28px;
+  font-weight: bold;
+}
+
+.close:hover,
+.close:focus {
+  color: #000;
+  text-decoration: none;
+  cursor: pointer;
+}
+</style>
+
+</head>
+<body>
+  
+  <!-- Button trigger modal -->
+<button type="button" class="btn btn-primary" data-toggle="modal" data-target="#exampleModal">
+  Add Skills
+</button>
+
+<!-- Modal -->
+<div class="modal fade" id="exampleModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+  <div class="modal-dialog" role="document">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h5 class="modal-title" id="exampleModalLabel">Add Your Skills</h5>
+        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+          <span aria-hidden="true">&times;</span>
+        </button>
+      </div>
+      <div class="modal-body">
+        <form action="" name="modelForm">
+          
+        <!-- <label for="skill">Skills</label>
+        <input type="text" class="form-control col-lg" name="headSkill" placeholder="Fronted Bakcend Full Stack"> -->
+
+        <label for="headerSkillAdd">Add Headers</label>
+        <input type="text" id = "in">
+        <input type="button" onclick="myFunctionToAddHeader()" class="btn btn-dark" value="Add Header Skill">
+         <!-- <input type="button" class="btn btn-danger" onclick="myFunctionToDeleteHeader()" value="delete header"> -->
+        <br> <br>
+
+
+        <select name="headSkill" id="dept" class="form-select" aria-label="Default select example">
+       
+          <!-- <option selected >Select Domains</option> -->
+          <option value="frontend">Frontend</option>
+          <option value="backend">Backend</option>
+          <!-- <option value="other">other</option> -->
+        </select>
+        <br><br>
+        <!-- <label for="otherSkillInput">For Other Skills</label>
+        <input type="text" name = "otherSkillInput"> -->
+        <button onclick="getModelLiData()" type="button" class="btn btn-primary">Add</button>   
+        <!-- <button onclick="appendOptions()"class="btn btn-success" >Append List</button> -->
+        <br><br>
+
+
+        <label for="typedSkill">Skill</label>
+        <input type="text" name="typedSkill" >
+        <div class="form-check form-check-inline">
+          <input class="form-check-input" name="skill" type="checkbox" id="inlineCheckbox1" value="css">
+          <label class="form-check-label" for="inlineCheckbox1">CSS</label>
+        </div>
+        
+        <div class="form-check form-check-inline">
+          <input class="form-check-input" name="skill" type="checkbox" id="inlineCheckbox1" value="html">
+          <label class="form-check-label" for="inlineCheckbox1">HTML</label>
+        </div>
+        
+        <div class="form-check form-check-inline">
+          <input class="form-check-input" name="skill" type="checkbox" id="inlineCheckbox1" value="javascript">
+          <label class="form-check-label" for="inlineCheckbox1">Javascript</label>
+        </div>
+        
+        <div class="form-check form-check-inline">
+          <input class="form-check-input" name="skill" type="checkbox" id="inlineCheckbox1" value="java">
+          <label class="form-check-label" for="inlineCheckbox1">Java</label>
+        </div>
+        
+        <div class="form-check form-check-inline">
+          <input class="form-check-input" name="skill" type="checkbox" id="inlineCheckbox1" value="php">
+          <label class="form-check-label" for="inlineCheckbox1">PHP</label>
+        </div>
+        
+        <div class="form-check form-check-inline">
+          <input class="form-check-input" name="skill" type="checkbox" id="inlineCheckbox1" value="python">
+          <label class="form-check-label" for="inlineCheckbox1">Python</label>
+        </div>
+        
+      </div>
+      
+      <div class="modal-footer">
+        <button type="button" class="btn btn-danger" data-dismiss="modal">Close</button>
+        <button onclick="skillsGet()" type="button" class="btn btn-primary">Save</button>     
+      </div>
+
+    </form>
+    </div>
+  </div>
+</div>
+
+<div>
+
+  <div id="delete">
+<!-- fronend -->
+<ul>
+  <li class="green" id="myList"></li>
+    <ul>
+      <li id="myList1"></li>
+    </ul>
+  </li>
+</ul>
+<!-- Bakcend -->
+<ul>
+  <li id="myListRe" class="green"></li>
+    <ul>
+      <li id="myList1Re"></li>
+    </ul>
+  </li>
+</ul>
+<!-- other -->
+
+<!-- <ul>
+  <li id="myOtherSkillsHead1" class="green"></li>
+    <ul>
+      <li id="myOtherSkillsChild1"></li>
+    </ul>
+  </li>
+</ul> -->
+
+<!-- for 2 -->
+<ul>
+  <li id="header2" class="green"></li>
+    <ul>
+      <li id="child2"></li>
+    </ul>
+  </li>
+</ul>
+
+<!-- for 3 -->
+<ul>
+  <li id="header3" class="green"></li>
+    <ul>
+      <li id="child3"></li>
+    </ul>
+  </li>
+</ul>
+
+<!-- for 4 -->
+<ul>
+  <li id="header4" class="green"></li>
+    <ul>
+      <li id="child4"></li>
+    </ul>
+  </li>
+</ul>
+
+<!-- for 5 -->
+<ul>
+  <li id="header5" class="green"></li>
+    <ul>
+      <li id="child5"></li>
+    </ul>
+  </li>
+</ul>
+
+<!-- for 6 -->
+<ul>
+  <li id="header6" class="green"></li>
+    <ul>
+      <li id="child6"></li>
+    </ul>
+  </li>
+</ul>
+<!-- for 7 -->
+<ul>
+  <li id="header7" class="green"></li>
+    <ul>
+      <li id="child7"></li>
+    </ul>
+  </li>
+</ul>
+<!-- for 8 -->
+<ul>
+  <li id="header8" class="green"></li>
+    <ul>
+      <li id="child8"></li>
+    </ul>
+  </li>
+</ul> 
+<!-- for 9 -->
+<ul>
+  <li id="header9" class="green"></li>
+    <ul>
+      <li id="child9"></li>
+    </ul>
+  </li>
+</ul> 
+<!-- for 10 -->
+<ul>
+  <li id="header10" class="green"></li>
+    <ul>
+      <li id="child10"></li>
+    </ul>
+  </li>
+</ul> 
+
+
+
+<!-- <ul>
+  <li id="myOtherSkillsHead2"></li>
+    <ul>
+      <li id="myOtherSkillsChild2"></li>
+    </ul>
+  </li> -->
+</ul>
+
+
+<!-- <ul id="">
+  <li class="green" id="otherDiv"></li>    
+  <li id="otherP" class="ml-5"></li>
+</ul>
+</div> -->
+
+<!-- <ul class="ml-2" id="head">
+  
+  <li class="ml-3" id="child">
+    
+  </li>
+</ul>
+<br id="br"> -->
+  
+<!-- <ul>
+  <li id="br"></li>
+  <li>
+    <ul>
+      <li id="br"></li>
+    </ul>
+  </li>
+</ul> -->
+
+</div>
+<!--   
+  <button id="myBtn">Add skills</button>
+  <header>:
+    <input type="text" id="show" name="skills"><br>
+  </header>
+  
+  
+  
+  <div id="myModal" class="modal">
+    
+    
+    <div class="modal-content">
+      <span class="close">&times;</span>
+      
+      <form name="myform">
+      <table>
+      <tr>
+      <td>
+     
+        <select id="mi">
+         <option value="" selected="selected">Select...</option>
+          <option value="frontend">frontend</option>
+      <option value="backend">backend</option>
+      
+      <option value="other">Other</option>
+      </select>
+      </td>
+      </tr>
+      </table>
+     
+    </form>
+      <button type="button" onclick="setAsList()">Set as selection</button>
+<button type="button" onclick="addToList()">Add to selection</button>
+     
+                <header>Add skills:
+                    <input type="text"id="txtVal"/>
+                    <button onclick="addLi()">add</button>
+                </header>
+    
+        <input type="Checkbox"id="txtValue" name="skill" value="CSS">CSS
+        <input type="Checkbox"id="txtValues" name="skill" value="JAVA">JAVA
+        <input type="Checkbox"id="cp" name="skill"value="CPP" >CPP
+        <input type="Checkbox"id="sq"name="skill" value="SQL">SQL
+        <input type="Checkbox"id="dm" name="skill" value="DBMS">DBMS
+        <input type="Checkbox"id="or" name="skill"value="ORACLE">ORACLE
+        <input type="Checkbox"id="ht" name="skill" value="HTML5">HTML5
+        <input type="Checkbox"id="ph" name="skill" value="PHP">PHP
+        <input type="Checkbox"id="oo" name="skill" value="OS">OS
+        <input type="Checkbox"id="pi" name="skill" value="EXCEL">EXCEL
+        <input type="Checkbox"id="dev" name="skill"value="DEVELOPER">DEVELOPER</p>
+
+        <button type="button" onclick="addList()&&addLists()">Set as selection</button>
+        
+        
+  </div>
+
+<!-- </div> -->
+
+<!-- <script> -->
+ 
+
+<!-- // var modal = document.getElementById("myModal");
+// var btn = document.getElementById("myBtn");
+
+
+// var span = document.getElementsByClassName("close")[0];
+
+
+// btn.onclick = function() {
+//   modal.style.display = "block";
+// }
+
+
+// span.onclick = function() {
+//   modal.style.display = "none";
+// }
+
+
+// window.onclick = function(event) {
+//   if (event.target == modal) {
+ //     modal.style.display = "none";
+    
+//   } -->
+<!-- // } --> 
+<!-- </script> -->
+ <!-- --> 
+
+<!-- <ul id="printHere">
+
+</ul>
+<script> -->
+
+<!-- //     function print() {
+//         var x = document.getElementById("mi");
+//         console.log(x.value);//test to see if it works
+//         document.getElementById("printHere").innerHTML = x;
+
+//     }
+
+//     function setAsList(){
+//         var x = document.getElementById("mi");
+//         console.log(x.value);//test to see if it works
+//         document.getElementById("printHere").innerHTML = "<li>" + x.value + "</li>";
+//     }
+
+//     function addToList() {
+//         var x = document.getElementById("mi");
+//         console.log(x.value);//test to see if it works
+//         document.getElementById("printHere").innerHTML += "<li>" + x.value + "</li>";
+//     }
+//     function myFunction(){
+
+//     var textnode = document.createTextNode("html");
+//   node.appendChild(textnode);
+//   document.getElementById("mi").appendChild(node);
+// }
+     <!-- --> 
+
+
+</script>
+<script>
+  function addLi()
+  {
+    var txtVal=document.getElementById('txtVal').value,
+    listNode=document.getElementById('printHere'),
+    liNode=document.createElement("LI"),
+    txtNode=document.createTextNode(txtVal);
+    liNode.appendChild(txtNode);
+    listNode.appendChild(liNode);
+  }
+</script>
+<script>
+  function addList()
+  {
+    var txtValue=document.getElementById('txtValue').value,
+    listNode=document.getElementById('printHere'),
+    liNode=document.createElement("LI"),
+    txtNode=document.createTextNode(txtValue);
+    liNode.appendChild(txtNode);
+    listNode.appendChild(liNode);
+   
+  }
+</script>
+<script>
+  function addLists(){
+var txtValues=document.getElementById('txtValues').value,
+listNode=document.getElementById('printHere'),
+liNode=document.createElement("LI"),
+txtNode=document.createTextNode(txtValues);
+liNode.appendChild(txtNode);
+listNode.appendChild(liNode);
+  }
+</script>
+
+
+<br>
+<br>
+<button class="btn btn-danger" onclick="deleteSkills()">Delete</button>
+<h2>Employment status</h2>
+<form action="" name="employee">
+
+  <select id="empStatus" name ="empStatus">
+    
+        <option value="employed">employed</option>
+        <option value="Unmployed">Unemployed</option>
+ </select>
+        <h2>Seeking Job</h2>
+       
+        
+            <input type="radio" name="seekingJob" value="yes">yes
+            <br>
+            <input type="radio" name="seekingJob" value="no">no
+          <br><br>
+
+         <label> JOB TITLE </label>       
+<input type="text" placeholder="title" name="jobTittle" maxlength="200"/> <br> <br>
+
+<label>Job type</label>
+<select name="jobType">
+    <option value="Full-time">Full-time</option>
+    <option value="Part-time">Part-time</option>
+
+    </select>
+    <br>
+    <br>
+    <label>Job summary</label>
+<input type="text" name="jobSummary" placeholder="summary" maxlength="300">
+<br>
+<a href="./join.html">
+<button class="btn btn-danger" type="go back">go back</button>
+</a>
+<button type="save details" class="btn btn-success" id="button1" >save details</button>
+
+<!-- <a href="./lastpage.html">Go</a> -->
+<a href="./lastpage.html">
+<button type="button" class="btn btn-primary" value="click" id="button1" onclick ="return getEmployee();" >generate</button>
+</a>
+
+</a>
+</form>
+
+
+<script src="./empData.js"></script>
+</body>
+</html>
