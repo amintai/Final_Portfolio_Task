@@ -77,11 +77,21 @@
                 </h4>`)
                 document.write(`<br><h3 class="text-danger">My Skill and experties </h3>`)
                 
-                document.write(` <h3 class="text-success">Frontend  => ${FrontEndSkill} </h3>`);
-                document.write(` <h3 class="text-success">  ===> ${childFrontendSKills} </h3>`);
+                if(localStorage.hasOwnProperty("FrontEndSkill") && localStorage.hasOwnProperty("childFrontendSkills")) {
+                    document.write(` <h3 class="text-success"> ${FrontEndSkill} : ${childFrontendSKills} </h3>`);
+                } else {
+                    document.write()
+                }
+                    
+                // document.write(` <h3 class="text-success">  ===> ${childFrontendSKills} </h3>`);
 
-                document.write(`<h3 class="text-success">Backend =>${BackEndSkill}</h3>`)
-                document.write(` <h3 class="text-success">  ===> ${childBackendSkills} </h3>`);
+                if(localStorage.hasOwnProperty("BackEndSkill") && localStorage.hasOwnProperty("childBackendSkills")) {
+                    document.write(` <h3 class="text-success"> ${BackEndSkill} : ${childBackendSkills} </h3>`);
+                } else {
+                    document.write()
+                }
+                // document.write(`<h3 class="text-success">Backend =>${BackEndSkill}</h3>`)
+                // document.write(` <h3 class="text-success">  ===> ${childBackendSkills} </h3>`);
 
                 document.write(`<h3 class="text-danger">dynamic skills</h3>`)
 
