@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script>
+        // document.getElementById('in').onclick = function(){
+        //     doSomething();
+        // }
+        // function doSomething(){
+        //     var element = document.createElement('input')
+        //     element.type = button,
+        //     // element.value = "delete",
+        //     // element.name = "del",
+        //     element.onclick = function() {
+        //         alert("From")
+        //     }
+        //     var foo = document.getElementById('demo')
+        //     foo.appendChild(element)
+        // }
+
+        function myFunction() {
+    var btn = document.createElement("BUTTON");
+    var t = document.createTextNode("CLICK ME");
+
+    btn.setAttribute("style","color:red;font-size:23px");
+
+    btn.appendChild(t);
+    document.body.appendChild(btn);
+
+    btn.setAttribute("onclick", alert("clicked"));
+
+}
+    </script>
+</head>
+<body>
+    <button onclick="myFunction()">Try it</button>
+
+    <span id="demo"></span>
+    <input type="button" value="click" id="in">
+</body>
+</html>

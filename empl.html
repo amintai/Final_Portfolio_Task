@@ -70,6 +70,10 @@
 ul li{
   list-style: none;
 }
+.green {
+  font-weight: bold;
+  color: green;
+}
 input[type=text], input[type=password] {
   width: 100%;
   padding: 15px;
@@ -132,6 +136,18 @@ input[type=text], input[type=password] {
   text-decoration: none;
   cursor: pointer;
 }
+/* #mySpan{
+  height: 10px;
+  width: 20px;
+} */
+.frontendD {  
+    height: 25px;
+    width: 60px;
+    margin-left: 100px;
+    /* margin-bottom: 200px; */
+    /* margin-bottom: 30px; */
+}
+
 </style>
 
 </head>
@@ -158,48 +174,85 @@ input[type=text], input[type=password] {
         <!-- <label for="skill">Skills</label>
         <input type="text" class="form-control col-lg" name="headSkill" placeholder="Fronted Bakcend Full Stack"> -->
 
+        <label for="headerSkillAdd">Add Headers</label>
+        <input type="text" id = "in">
+        <input type="button" onclick="myFunctionToAddHeader()" class="btn btn-dark" value="Add Header Skill">
+         <!-- <input type="button" class="btn btn-danger" onclick="myFunctionToDeleteHeader()" value="delete header"> -->
+        <br> <br>
+
+
         <select name="headSkill" id="dept" class="form-select" aria-label="Default select example">
+       
           <!-- <option selected >Select Domains</option> -->
           <option value="frontend">Frontend</option>
           <option value="backend">Backend</option>
-          <option value="other">other</option>
+          <!-- <option value="other">other</option> -->
         </select>
         <br><br>
-        <button onclick="getModelLiData()" type="button" class="btn btn-primary">Add</button>   
-        <button onclick="appendOptions()"class="btn btn-success" >Append List</button>
+        <!-- <label for="otherSkillInput">For Other Skills</label>
+        <input type="text" name = "otherSkillInput"> -->
+        <button onclick="getModelLiData() " type="button" class="btn btn-primary">Add</button>   
+        <!-- <button onclick="appendOptions()"class="btn btn-success" >Append List</button> -->
         <br><br>
+
 
         <label for="typedSkill">Skill</label>
         <input type="text" name="typedSkill" >
+        
         <div class="form-check form-check-inline">
           <input class="form-check-input" name="skill" type="checkbox" id="inlineCheckbox1" value="css">
-          <label class="form-check-label" for="inlineCheckbox1">CSS</label>
+          css
+          <!-- <label class="form-check-label" for="inlineCheckbox1">CSS</label> -->
         </div>
         
         <div class="form-check form-check-inline">
           <input class="form-check-input" name="skill" type="checkbox" id="inlineCheckbox1" value="html">
-          <label class="form-check-label" for="inlineCheckbox1">HTML</label>
+          html
+          <!-- <label class="form-check-label" for="inlineCheckbox1">HTML</label> -->
         </div>
-        
-        <div class="form-check form-check-inline">
+           
+         <div class="form-check form-check-inline">
           <input class="form-check-input" name="skill" type="checkbox" id="inlineCheckbox1" value="javascript">
-          <label class="form-check-label" for="inlineCheckbox1">Javascript</label>
-        </div>
-        
+          javascript
+          <!-- <label class="form-check-label" for="inlineCheckbox1">Javascript</label> -->
+        </div>         
         <div class="form-check form-check-inline">
           <input class="form-check-input" name="skill" type="checkbox" id="inlineCheckbox1" value="java">
-          <label class="form-check-label" for="inlineCheckbox1">Java</label>
+          java
+          <!-- <label class="form-check-label" for="inlineCheckbox1">Java</label> -->
         </div>
         
         <div class="form-check form-check-inline">
           <input class="form-check-input" name="skill" type="checkbox" id="inlineCheckbox1" value="php">
-          <label class="form-check-label" for="inlineCheckbox1">PHP</label>
+          php
+          <!-- <label class="form-check-label" for="inlineCheckbox1">PHP</label> -->
         </div>
         
         <div class="form-check form-check-inline">
           <input class="form-check-input" name="skill" type="checkbox" id="inlineCheckbox1" value="python">
-          <label class="form-check-label" for="inlineCheckbox1">Python</label>
-        </div>
+         python
+          <!-- <label class="form-check-label" for="inlineCheckbox1">Python</label> -->
+        </div> 
+        
+        <div class="form-check form-check-inline">
+          <input class="form-check-input" name="skill" type="checkbox" id="inlineCheckbox1" value="angular">
+         Angular
+          <!-- <label class="form-check-label" for="inlineCheckbox1">Python</label> -->
+        </div> 
+        <div class="form-check form-check-inline">
+          <input class="form-check-input" name="skill" type="checkbox" id="inlineCheckbox1" value="react">
+        React
+          <!-- <label class="form-check-label" for="inlineCheckbox1">Python</label> -->
+        </div> 
+
+        <div class="form-check form-check-inline">
+          <input class="form-check-input" name="skill" type="checkbox" id="inlineCheckbox1" value="node">
+        Node js
+          <!-- <label class="form-check-label" for="inlineCheckbox1">Python</label> -->
+        </div> 
+        
+
+        
         
       </div>
       
@@ -216,27 +269,130 @@ input[type=text], input[type=password] {
 <div>
 
   <div id="delete">
+<!-- fronend -->
 <ul>
-  <li id="myList"></li>
-    <ul>
-      <li id="myList1"></li>
-    </ul>
+  <li class="green" id="myList"></li> 
+  <ul>
+    <li id="myList1"></li>
+
+  </ul>
+  <li class="frontendDel" id="frontendDel"></li>
+  <!-- <li id="frontendEdit" class="frontendEdit"></li> -->
   </li>
 </ul>
 
+<!-- Bakcend -->
 <ul>
-  <li id="myListRe"></li>
+  <li id="myListRe" class="green"></li>
     <ul>
       <li id="myList1Re"></li>
     </ul>
   </li>
 </ul>
+<!-- other -->
 
-<ul id="">
-  <li id="otherDiv"></li>    
+<!-- <ul>
+  <li id="myOtherSkillsHead1" class="green"></li>
+    <ul>
+      <li id="myOtherSkillsChild1"></li>
+    </ul>
+  </li>
+</ul> -->
+
+<!-- for 2 -->
+<ul>
+  <li id="header2" class="green"></li>
+    <ul>
+      <li id="child2"></li>
+    </ul>
+  </li>
+</ul>
+
+<!-- for 3 -->
+<ul>
+  <li id="header3" class="green"></li>
+    <ul>
+      <li id="child3"></li>
+    </ul>
+  </li>
+</ul>
+
+<!-- for 4 -->
+<ul>
+  <li id="header4" class="green"></li>
+    <ul>
+      <li id="child4"></li>
+    </ul>
+  </li>
+</ul>
+
+<!-- for 5 -->
+<ul>
+  <li id="header5" class="green"></li>
+    <ul>
+      <li id="child5"></li>
+    </ul>
+  </li>
+</ul>
+
+<!-- for 6 -->
+<ul>
+  <li id="header6" class="green"></li>
+    <ul>
+      <li id="child6"></li>
+    </ul>
+  </li>
+</ul>
+<!-- for 7 -->
+<ul>
+  <li id="header7" class="green"></li>
+    <ul>
+      <li id="child7"></li>
+    </ul>
+  </li>
+</ul>
+<!-- for 8 -->
+<ul>
+  <li id="header8" class="green"></li>
+    <ul>
+      <li id="child8"></li>
+    </ul>
+  </li>
+</ul> 
+<!-- for 9 -->
+<ul>
+  <li id="header9" class="green"></li>
+    <ul>
+      <li id="child9"></li>
+    </ul>
+  </li>
+</ul> 
+<!-- for 10 -->
+<ul>
+  <li id="header10" class="green"></li>
+    <ul>
+      <li id="child10"></li>
+    </ul>
+  </li>
+</ul> 
+
+
+
+<!-- <ul>
+  <li id="myOtherSkillsHead2"></li>
+    <ul>
+      <li id="myOtherSkillsChild2"></li>
+    </ul>
+  </li> -->
+</ul>
+
+
+<!-- <ul id="">
+  <li class="green" id="otherDiv"></li>    
   <li id="otherP" class="ml-5"></li>
 </ul>
-</div>
+</div> -->
+
 <!-- <ul class="ml-2" id="head">
   
   <li class="ml-3" id="child">
@@ -412,8 +568,7 @@ listNode.appendChild(liNode);
 
 <br>
 <br>
-<button class="btn btn-danger" onclick="deleteSkills()">Delete</button>
-<button class="btn btn-success" onclick="updateSkills()"> Update</button>
+<!-- <button class="btn btn-danger" onclick="deleteSkills()">Delete</button> -->
 <h2>Employment status</h2>
 <form action="" name="employee">
 
@@ -444,14 +599,13 @@ listNode.appendChild(liNode);
     <label>Job summary</label>
 <input type="text" name="jobSummary" placeholder="summary" maxlength="300">
 <br>
-<a href="./join.html">
-<button class="btn btn-danger" type="go back">go back</button>
-</a>
-<button type="save details" class="btn btn-success" id="button1" >save details</button>
+<a href="./join.html" class="btn btn-danger" >go back</a>
+
+<input type="button" class="btn btn-success" onclick ="return getEmployee();" value="save changes" id="button1" >
 
 <!-- <a href="./lastpage.html">Go</a> -->
 <a href="./lastpage.html">
-<button type="button" class="btn btn-primary" value="click" id="button1" onclick ="return getEmployee();" >generate</button>
+<input type="button"  class="btn btn-primary"  id="button1" value="generate" >
 </a>
 
 </a>

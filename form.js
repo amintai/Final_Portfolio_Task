@@ -4,6 +4,7 @@ function FormData() {
     var lastName = document.forms["joinForm"]["lastName"].value;
     var education = document.forms["joinForm"]["education"].value;
     var email = document.forms["joinForm"]["email"].value;
+    // alert(email)
     var address = document.forms["joinForm"]["address"].value;
     var phoneNumber = document.forms["joinForm"]["phoneNumber"].value;
     var gender = document.forms["joinForm"]["gender"].value;
@@ -12,6 +13,15 @@ function FormData() {
     var img = document.forms["joinForm"]["profilePicture"].files[0]
 
     
+    
+    var phoneRegularEx = /^\d{10}$/;
+    if(!phoneNumber.match(phoneRegularEx)) {
+        alert("Phone Number Cant have string value!")
+        return false
+    } else {
+        localStorage.setItem("phoneNumber", phoneNumber);
+    }
+
     var bannerImage = document.getElementById('profilePicture').value;
    // imgData = getBase64Image(bannerImage);
     localStorage.setItem("profilePicture", bannerImage);
@@ -24,8 +34,7 @@ function FormData() {
     localStorage.setItem("education", education);
     
     localStorage.setItem("address", address);
-    localStorage.setItem("phoneNumber", phoneNumber);
-    localStorage.setItem("email",email)
+    // localStorage.setItem("email",email)
     localStorage.setItem("gender", gender);
     localStorage.setItem("numberType", numberType);
     localStorage.setItem("birthdaytime",date)

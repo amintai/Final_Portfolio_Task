@@ -1,10 +1,19 @@
 <html>
     <head>
       <link rel="stylesheet" href=" https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
-
+      <link rel="stylesheet" href="./">
         <title>Join in</title>
         <script src="./form.js"></script>
         <script>
+          function myEmail(){
+
+            var email = localStorage.getItem("email");
+           //alert(email)
+     // document.getElementById('actEmail').value = "email"
+      var val = document.getElementById("actEmail");
+      val.setAttribute("value",email)
+     
+          }
         // function handleSubmit() {
         //     const firstname=document.getElementById('txt').value;
         //     const middlename=document.getElementById('tx').value;
@@ -54,11 +63,11 @@
                 
             }
         </style>
-        <body>
+        <body onload="myEmail()">
             <form action="lastpage.html" name="joinForm">
             <h1>Join now</h1>
             <label> Firstname </label>       
-<input type="text" name="firstName"id="txt" maxlength="15"/> <br> <br>
+<input class="" type="text" name="firstName"id="txt" maxlength="15"/> <br> <br>
 <label> Middlename: </label>   
 <input type="text" name="middleName"id="tx" maxlength="10"/> <br> <br>
 <label> Lastname: </label>       
@@ -69,9 +78,11 @@
 <input type="text" name="education"id="hg" maxlength="=100"/>
 <br>
 <br>
-
+<script>
+    // var input = `<input name='email' type='text' value='${email} plceholder='abc@gmail.com' id=''`
+</script>
 <label>email address :</label> 
-<input  name="email" type="text" placeholder="abc@gmail.com"id="tg"  />
+<input id="actEmail" value=""  name="email" type="text">
 <br>
 <br>
 <label> address :</label> 
@@ -83,7 +94,7 @@
 <br><br>
 <label for="profile Picture">Profile Picture</label>
 
-<input type="file" name="profilePicture" id="profilePicture" accept="image/">
+<input type="file" name="profilePicture" id="profilePicture" accept="image/*">
 <br><br>
 <!-- 
             

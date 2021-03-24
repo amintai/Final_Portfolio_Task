@@ -1,7 +1,7 @@
 <html>
     <head>
         <link rel="stylesheet" href=" https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
-       
+        <script src="./empData.js"></script>
         <h1 style="align-items: center;">Portfolio</h1>
         <div id="x"></div>
         <!-- <img src="" alt="Sorry" id="image"> -->
@@ -18,7 +18,7 @@
            var phoneNumber = localStorage.getItem("phoneNumber")
            var numberType = localStorage.getItem("numberType")
             
-        //    employee status
+          //    employee status
           var empStatus = localStorage.getItem("empStatus")
           var seekingJob = localStorage.getItem("seekingJob") 
           var jobTittle = localStorage.getItem("jobTittle")
@@ -28,14 +28,41 @@
           // get skills
           var FrontEndSkill = localStorage.getItem("FrontEndSkill")
           var BackEndSkill = localStorage.getItem("BackEndSkill")
-          var OtherSkill = localStorage.getItem("OtherSkill")
-          
+          var header2 = localStorage.getItem("Head2 ")
+          var header3 = localStorage.getItem("Head3 ")
+         
+          var header4 = localStorage.getItem("Head4 ")
+         
+          var header5 = localStorage.getItem("Head5 ")
+         
+          var header6 = localStorage.getItem("Head6 ")
+         
+          var header7 = localStorage.getItem("Head7 ")
+         
+          var header8 = localStorage.getItem("Head8 ")
+         
+          var header9 = localStorage.getItem("Head9 ")
+          var header10 = localStorage.getItem("Head10 ")
+         
+
+          var child2 = JSON.parse(localStorage.getItem("Child2"))
+          var child3 = JSON.parse(localStorage.getItem("Child3"))
+          var child4 = JSON.parse(localStorage.getItem("Child4"))
+          var child5 = JSON.parse(localStorage.getItem("Child5"))
+          var child6 = JSON.parse(localStorage.getItem("Child6"))
+          var child7 = JSON.parse(localStorage.getItem("Child7"))
+          var child8 = JSON.parse(localStorage.getItem("Child8"))
+          var child9 = JSON.parse(localStorage.getItem("Child9"))
+          var child10 = JSON.parse(localStorage.getItem("Child10"))
+          //var OtherSkill = localStorage.getItem("OtherSkill")
+            
 
         var childFrontendSKills = JSON.parse(localStorage.getItem("childFrontendSkills"))
         var childBackendSkills = JSON.parse(localStorage.getItem("childBackendSkills"))
-        var childOtherSkills = localStorage.getItem("childOtherSkills")
+       // var childOtherSkills = localStorage.getItem("childOtherSkills")
           //console.log(empStatus,seekingJob,jobSummary,jobTittle)
-            //
+        
+          
 
            var dataImage = localStorage.getItem('profilePicture');
           var actImage =  dataImage.split("\\").pop()
@@ -46,17 +73,149 @@
           
           document.write(`<h4 class="text-primary">Hello i am : <strong class="text-success">${firstName}</strong>  Middle Name : <strong class="text-success">${middleName}</strong> Last Name  : <strong class="text-success">${lastName} </strong> i've done my in Education : <strong class="text-success">${education}</strong> and my  Email is  : <strong class="text-success"> ${email} </strong> i am from Address : <strong class="text-success">${address}</strong> and my birthdate is Date  : <strong class="text-success">${date}</strong> Gender : <strong class="text-success">${gender}</strong> , my Phone Number is : <strong class="text-success"> ${phoneNumber}</strong>  Number Type : <strong class="text-success">${numberType} </strong></h1>`)
             
-            document.write(`<h4 class="text-primary"><br><br> My Employeement status <strong class='text-success'> ${empStatus} </strong>Employee Status : <strong class="text-success"> ${empStatus}</strong>, Seeking Job : <strong class="text-success"> ${seekingJob} </strong>, Job Tittle : <strong class="text-success"> ${jobTittle}</strong> , job Type : <strong class="text-success">${jobType}</strong> , Job Summary : <strong class="text-success"> ${jobSummary}</strong>
+            document.write(`<h4 class="text-primary"><br><br> My Employeement status <strong class='text-success'> ${empStatus} </strong>, Seeking Job : <strong class="text-success"> ${seekingJob} </strong>, Job Tittle : <strong class="text-success"> ${jobTittle}</strong> , job Type : <strong class="text-success">${jobType}</strong> , Job Summary : <strong class="text-success"> ${jobSummary}</strong>
                 </h4>`)
                 document.write(`<br><h3 class="text-danger">My Skill and experties </h3>`)
-                document.write(` <h3 class="text-success">Frontend  => ${FrontEndSkill} </h3>`);
-                document.write(` <h3 class="text-success">  ===> ${childFrontendSKills} </h3>`);
+                
+                if(localStorage.hasOwnProperty("FrontEndSkill") && localStorage.hasOwnProperty("childFrontendSkills")) {
+                    document.write(` <h3 class="text-success"> ${FrontEndSkill} : ${childFrontendSKills} </h3>`);
+                } else {
+                    document.write()
+                }
+                    
+                // document.write(` <h3 class="text-success">  ===> ${childFrontendSKills} </h3>`);
 
-                document.write(`<h3 class="text-success">Backend =>${BackEndSkill}</h3>`)
-                document.write(` <h3 class="text-success">  ===> ${childBackendSkills} </h3>`);
+                if(localStorage.hasOwnProperty("BackEndSkill") && localStorage.hasOwnProperty("childBackendSkills")) {
+                    document.write(` <h3 class="text-success"> ${BackEndSkill} : ${childBackendSkills} </h3>`);
+                } else {
+                    document.write()
+                }
+                // document.write(`<h3 class="text-success">Backend =>${BackEndSkill}</h3>`)
+                // document.write(` <h3 class="text-success">  ===> ${childBackendSkills} </h3>`);
 
+                document.write(`<h3 class="text-danger">dynamic skills</h3>`)
 
-                document.write(`<h3 class ="text-success">Others=>${childOtherSkills}</h3>`)
+                if(localStorage.hasOwnProperty("Head2 ") && localStorage.hasOwnProperty("Child2")) {
+                    document.write(` <h3 class="text-success"> ${header2} : ${child2} </h3>`);
+                } else {
+                    document.write()
+                }
+ 
+
+                // if(localStorage.getItem(header3) !== "null") {
+                //     document.write(` <h3 class="text-success"> ${header3} </h3>`);
+                // }
+                
+                if(localStorage.hasOwnProperty("Head3 ") && localStorage.hasOwnProperty("Child3")) {
+                    document.write(` <h3 class="text-success"> ${header3} : ${child3} </h3>`);
+                } else {
+                    document.write()
+                }
+                
+                if(localStorage.hasOwnProperty("Head4 ") && localStorage.hasOwnProperty("Child4")) {
+                    document.write(` <h3 class="text-success"> ${header4} : ${child4} </h3>`);
+                } else {
+                    document.write()
+                }
+                if(localStorage.hasOwnProperty("Head5 ") && localStorage.hasOwnProperty("Child5")) {
+                    document.write(` <h3 class="text-success"> ${header5}  : ${child5}</h3>`);
+                } else {
+                    document.write()
+                }
+                if(localStorage.hasOwnProperty("Head6 ") && localStorage.hasOwnProperty("Child6")) {
+                    document.write(` <h3 class="text-success"> ${header6} : ${child6}</h3>`);
+                } else {
+                    document.write()
+                }
+                if(localStorage.hasOwnProperty("Head7 ") && localStorage.hasOwnProperty("Child7")) {
+                    document.write(` <h3 class="text-success"> ${header7} : ${child7} </h3>`);
+                } else {
+                    document.write()
+                }
+                if(localStorage.hasOwnProperty("Head8 ") && localStorage.hasOwnProperty("Child8")) {
+                    document.write(` <h3 class="text-success"> ${header8} : ${child8} </h3>`);
+                } else {
+                    document.write()
+                }
+                if(localStorage.hasOwnProperty("Head9 ") && localStorage.hasOwnProperty("Child9")) {
+                    document.write(` <h3 class="text-success"> ${header9} : ${child9} </h3>`);
+                } else {
+                    document.write()
+                }
+                if(localStorage.hasOwnProperty("Head10 ") && localStorage.hasOwnProperty("Child10")) {
+                    document.write(` <h3 class="text-success"> ${header10} : ${child10} </h3>`); 
+                } else {
+                    document.write()
+                }
+                    
+                // if(localStorage.hasOwnProperty("Child2 ")) {
+                //     document.write(`<h3 class = "text-primary">${} </h3>`)
+                // } else {
+
+                // }
+                // if(localStorage.getItem[header4]) {
+                //     document.write(`<h3 class="text-success">${header4} </h3>`);
+                // } 
+                // if(localStorage[header5]) {
+                //     document.write(`<h3 class="text-success">${header5} </h3>`);
+                // } 
+                // if(localStorage[header6]) {
+                //     document.write(`<h3 class="text-success">${header6} </h3>`);
+                // } 
+                // if(localStorage[header7]) {
+                //     document.write(`<h3 class="text-success">${header7} </h3>`);
+                // } 
+                // if(localStorage[header8]) {
+                //     document.write(`<h3 class="text-success">${header8} </h3>`);
+                // } 
+                // if(localStorage[header9]) {
+                //     document.write(`<h3 class="text-success">${header9} </h3>`);
+                // }
+                //  if(localStorage[header10]) {
+                //     document.write(`<h3 class="text-success">${header10} </h3>`);
+                // } 
+                
+                
+                // if(localStorage.getItem(header4) === "null") {
+                //     return false
+                // } else {
+                //     document.write(` <h3 class="text-success"> ${header4} </h3>`);
+                // }
+
+                // if(localStorage.getItem(header5) !== "null") {
+                //     document.write(` <h3 class="text-success"> ${header5} </h3>`);
+                // } 
+                // if(localStorage.getItem(header6) !== "null") {
+                //     document.write(` <h3 class="text-success"> ${header6} </h3>`);
+                // } 
+                // if(localStorage.getItem(header7) !== "null") {
+                //     document.write(` <h3 class="text-success"> ${header7} </h3>`);
+                // } 
+                // if(localStorage.getItem(header8) !== "null") {
+                //     document.write(` <h3 class="text-success"> ${header8} </h3>`);
+                // } 
+                // if(localStorage.getItem(header9) !== "null") {
+                //     document.write(` <h3 class="text-success"> ${header9} </h3>`);
+                // } 
+                // if(localStorage.getItem(header10) !== "null") {
+                //     document.write(` <h3 class="text-success"> ${header10} </h3>`);
+                // } 
+                // document.write(` <h3 class="text-success"> ${header3} </h3>`);
+                // document.write(` <h3 class="text-success"> ${header4} </h3>`);
+                // document.write(` <h3 class="text-success"> ${header5} </h3>`);
+                // document.write(` <h3 class="text-success"> ${header6} </h3>`);
+                // document.write(` <h3 class="text-success"> ${header7} </h3>`);
+                // document.write(` <h3 class="text-success"> ${header8} </h3>`);
+                // document.write(` <h3 class="text-success"> ${header9} </h3>`);
+                // document.write(` <h3 class="text-success"> ${header10} </h3>`);
+                // document.write(` <h3 class="text-success"> ${header2} </h3>`);
+                // document.write(` <h3 class="text-success"> ${header2} </h3>`);
+                                
+
+                //document.write(` <h3 class="text-success">  ===> ${} </h3>`);
+                
+                
+            //    document.write(`<h3 class ="text-success">Others=>${childOtherSkills}</h3>`)
                 
                 
                 
